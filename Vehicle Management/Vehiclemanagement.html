@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vehicle Management System</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+  <h1>Vehicle Management System</h1>
+
+  <div class="container">
+    <!-- Left Form: Client Information -->
+    <form id="clientForm">
+        <h2>Client Information</h2>
+        <input type="text" id="clientName" placeholder="Client Name" required>
+        <input type="text" id="clientPhone" placeholder="Client Phone Number" required>
+        <input type="text" id="nationalID" placeholder="National ID / Passport ID" required>
+        <select id="country" required>
+          <option value="" disabled selected>Select Country</option>
+          <option value="USA">USA</option>
+          <option value="Canada">Canada</option>
+          <option value="UK">UK</option>
+          <option value="Australia">Australia</option>
+          <option value="Germany">Germany</option>
+          <option value="India">India</option>
+          <option value="Japan">Japan</option>
+          <option value="Other">Other</option>
+        </select>
+        <!-- Hidden input for custom country name -->
+        <input type="text" id="customCountry" placeholder="Enter Country" style="display: none;">
+    </form>      
+
+    <!-- Right Form: Vehicle Information -->
+    <form id="vehicleForm">
+      <h2>Vehicle Information</h2>
+      <input type="text" id="vehicleID" placeholder="Vehicle ID (License Plate)" required>
+      <input type="text" id="vehicleType" placeholder="Vehicle Type" required>
+      <input type="number" id="rentalTime" placeholder="Rental Time (Hours)" required>
+      <input type="number" id="costPerHour" placeholder="Cost Per Hour ($)" required>
+      <button type="submit">Registration submit</button>
+    </form>
+  </div>
+
+  <table id="recordsTable">
+    <thead>
+      <tr>
+        <th>Client Name</th>
+        <th>Phone Number</th>
+        <th>National ID</th>
+        <th>Country</th>
+        <th>Vehicle ID</th>
+        <th>Vehicle Type</th>
+        <th>Rental Time</th>
+        <th>Total Cost ($)</th>
+        <th>Option</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Data will be dynamically added here -->
+    </tbody>
+  </table>
+
+  <script src="script.js"></script>
+</body>
+</html>
